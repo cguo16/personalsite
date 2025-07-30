@@ -2,47 +2,50 @@ import React, { useState } from 'react';
 import './App.css';
 
 const imagePaths = [
-  "/images/Christina2.webp",
-  "/images/Christina3.webp",
-  "/images/Christina4.webp",
-  "/images/Christina5.webp",
-  "/images/Christina6.webp",
-  "/images/Christina7.jpeg",
-  "/images/Christina8.webp",
-  "/images/Christina9.webp",
-  "/images/Christina11.webp",
-  "/images/Christina12.webp",
-  "/images/Christina13.webp",
-  "/images/Christina14.webp",
-  "/images/Christina16.webp",
-  "/images/Christina17.webp",
-  "/images/Christina18.webp",
-  "/images/Christina19.webp",
-  "/images/Christina20.webp",
-  "/images/Christina21.webp",
-  "/images/Christina22.webp",
-  "/images/Christina23.webp",
-  "/images/Christina24.webp",
-  "/images/Christina25.webp",
-  "/images/Christina26.webp",
-  "/images/Christina27.webp",
-  "/images/Christina28.webp",
-  "/images/Christina29.webp",
-  "/images/Christina30.webp",
-  "/images/Christina31.webp",
-  "/images/Christina32.webp",
-  "/images/Christina33.webp",
-  "/images/Christina34.webp",
-  "/images/Christina35.webp",
-  "/images/Christina36.webp",
-  "/images/Christina37.webp",
-  "/images/Christina38.webp",
-  "/images/Christina39.webp",
-  "/images/Christina40.webp",
-  "/images/Christina41.webp",
-  "/images/Christina42.webp",
-  "/images/Christina43.webp"
+  `${process.env.PUBLIC_URL}/images/Christina1.webp`,
+  `${process.env.PUBLIC_URL}/images/Christina2.webp`,
+  `${process.env.PUBLIC_URL}/images/Christina3.webp`,
+  `${process.env.PUBLIC_URL}/images/Christina4.webp`,
+  `${process.env.PUBLIC_URL}/images/Christina5.webp`,
+  `${process.env.PUBLIC_URL}/images/Christina6.webp`,
+  `${process.env.PUBLIC_URL}/images/Christina7.jpeg`,
+  `${process.env.PUBLIC_URL}/images/Christina8.webp`,
+  `${process.env.PUBLIC_URL}/images/Christina9.webp`,
+  `${process.env.PUBLIC_URL}/images/Christina10.webp`,
+  `${process.env.PUBLIC_URL}/images/Christina11.webp`,
+  `${process.env.PUBLIC_URL}/images/Christina12.webp`,
+  `${process.env.PUBLIC_URL}/images/Christina13.webp`,
+  `${process.env.PUBLIC_URL}/images/Christina14.webp`,
+  `${process.env.PUBLIC_URL}/images/Christina16.webp`,
+  `${process.env.PUBLIC_URL}/images/Christina17.webp`,
+  `${process.env.PUBLIC_URL}/images/Christina18.webp`,
+  `${process.env.PUBLIC_URL}/images/Christina19.webp`,
+  `${process.env.PUBLIC_URL}/images/Christina20.webp`,
+  `${process.env.PUBLIC_URL}/images/Christina21.webp`,
+  `${process.env.PUBLIC_URL}/images/Christina22.webp`,
+  `${process.env.PUBLIC_URL}/images/Christina23.webp`,
+  `${process.env.PUBLIC_URL}/images/Christina24.webp`,
+  `${process.env.PUBLIC_URL}/images/Christina25.webp`,
+  `${process.env.PUBLIC_URL}/images/Christina26.webp`,
+  `${process.env.PUBLIC_URL}/images/Christina27.webp`,
+  `${process.env.PUBLIC_URL}/images/Christina28.webp`,
+  `${process.env.PUBLIC_URL}/images/Christina29.webp`,
+  `${process.env.PUBLIC_URL}/images/Christina30.webp`,
+  `${process.env.PUBLIC_URL}/images/Christina31.webp`,
+  `${process.env.PUBLIC_URL}/images/Christina32.webp`,
+  `${process.env.PUBLIC_URL}/images/Christina33.webp`,
+  `${process.env.PUBLIC_URL}/images/Christina34.webp`,
+  `${process.env.PUBLIC_URL}/images/Christina35.webp`,
+  `${process.env.PUBLIC_URL}/images/Christina36.webp`,
+  `${process.env.PUBLIC_URL}/images/Christina37.webp`,
+  `${process.env.PUBLIC_URL}/images/Christina38.webp`,
+  `${process.env.PUBLIC_URL}/images/Christina39.webp`,
+  `${process.env.PUBLIC_URL}/images/Christina40.webp`,
+  `${process.env.PUBLIC_URL}/images/Christina41.webp`,
+  `${process.env.PUBLIC_URL}/images/Christina42.webp`,
+  `${process.env.PUBLIC_URL}/images/Christina43.webp`,
 ];
+
 
 function App() {
   const [images] = useState(imagePaths);
@@ -69,5 +72,9 @@ function App() {
     </div>
   );
 }
+{imagePaths.map((path, index) => (
+  <img key={index} src={path} alt={`Christina ${index + 1}`} />
+))}
+
 
 export default App;
